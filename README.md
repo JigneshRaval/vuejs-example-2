@@ -533,7 +533,11 @@ In the Command prompt, add the URL for the remote repository where your local re
 
 ```
 git remote add origin remote repository URL
+
+# EXAMPLE : git remote add origin https://github.com/JigneshRaval/simple-blog.git
+
 # Sets the new remote
+
 git remote -v
 # Verifies the new remote URL
 ```
