@@ -1,0 +1,16 @@
+:root {
+    --base-font-family: 'Roboto', 'Helvetica Neue', Helvetica, sans-serif;
+    --base-font-size: 1rem; // 16px;
+    --base-line-height: 1.5;
+    --base-vertical-space: 8px;
+    --base-vertical-space-half: 4px;
+    --base-vertical-space-1x: var(--base-vertical-space, 8px);
+    --base-vertical-space-2x: calc(var(--base-vertical-space, 8px) * 2);
+    --base-vertical-space-3x: calc(var(--base-vertical-space, 8px) * 3);
+    --base-vertical-space-4x: calc(var(--base-vertical-space, 8px) * 4);
+    --base-vertical-space-5x: calc(var(--base-vertical-space, 8px) * 5);
+    --base-font: 'Open Sans';
+    --sidebar-link-color: #555;
+    --sidebar-link-active: #111;
+    --light-gray-border: 1px solid #DDD;
+}

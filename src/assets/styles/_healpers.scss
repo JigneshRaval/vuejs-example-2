@@ -1,0 +1,251 @@
+/*--------------------------------------------------*\
+	#HELPER-CLASSES
+\*--------------------------------------------------*/
+
+
+/* = Visibility
+====================================================*/
+/* Hide from both screenreaders and browsers: h5bp.com/u */
+.hidden { display: none !important; visibility: hidden; } /* note hidden here is a global override */
+
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+.sr-only,
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
+.sr-only-focusable,
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible { visibility: hidden; }
+
+.visible { visibility: visible; }
+
+
+/* = Display
+====================================================*/
+.display-inline {
+	display: inline !important;
+}
+.display-inline-block {
+	display: inline-block !important;
+}
+.display-block {
+	display: block !important;
+}
+.display-table {
+	display: table !important;
+}
+.display-table-cell {
+	display: table-cell !important;
+}
+.display-table-row {
+	display: table-row !important;
+}
+.display-flex {
+	display: flex !important;
+}
+.display-inline-flex {
+	display: inline-flex !important;
+}
+
+
+/* = Clearfix
+====================================================*/
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { *zoom: 1; }
+.clear{clear:both;}
+
+
+/* = Text Transformation
+====================================================*/
+.text-lowercase   { text-transform: lowercase; }
+.text-uppercase   { text-transform: uppercase; }
+.text-capitalize  { text-transform: capitalize; }
+
+
+/* = Weight and italics
+====================================================*/
+.font-normal      { font-weight: normal;; }
+.font-bold        { font-weight: bold; }
+.font-italic      { font-style: italic; }
+.nobold 			 { font-weight:normal; }
+
+
+/* = Verticle Alignment
+====================================================*/
+.v-align-top {vertical-align: top}
+.v-align-middle {vertical-align: middle}
+.v-align-bottom {vertical-align: bottom}
+.v-align-baseline {vertical-align: baseline}
+
+
+/* = Horizontal Alignment
+====================================================*/
+.text-align-left {text-align: left}
+.text-align-center {text-align: center}
+.text-align-right {text-align: right} /* al-table-cellalignRight is old use al-text-align-right */
+.text-align-justify {text-align: justify}
+
+
+/* = float helpers with responsive
+====================================================*/
+.float-left {float: left;}
+
+.float-right {float: right;}
+
+.float-none {float: none;}
+
+
+/* = Spacing : Padding (Top, Right, Bottom, Left)
+====================================================*/
+$spacing-array: 11 22 33 44 55;
+$spacing-sides: top right bottom left;
+
+@each $sides in $spacing-sides {
+	$j: index($spacing-sides, $sides);
+
+    @each $spacing in $spacing-array {
+    	$i: index($spacing-array, $spacing);
+
+    	.padding-#{$sides}-#{$i}x {
+        	padding-#{$sides}: #{$i * 11}px;
+	    }
+	}
+}
+
+.no-padding {
+	padding: 0;
+}
+
+@each $spacing in $spacing-array {
+	$i: index($spacing-array, $spacing);
+
+	.padding-all-#{$i}x {
+		padding: #{$i * 11}px;
+	}
+
+}
+
+
+/* = Spacing : Margin (Top, Right, Bottom, Left)
+====================================================*/
+@each $sides in $spacing-sides {
+	$j: index($spacing-sides, $sides);
+
+    @each $spacing in $spacing-array {
+    	$i: index($spacing-array, $spacing);
+
+    	.margin-#{$sides}-#{$i}x {
+        	margin-#{$sides}: #{$i * 11}px;
+	    }
+	}
+}
+
+.no-margin {
+	margin: 0;
+}
+.margin-auto {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@each $spacing in $spacing-array {
+	$i: index($spacing-array, $spacing);
+
+	.margin-all-#{$i}x {
+		margin: #{$i * 11}px;
+	}
+
+}
+
+
+/* = Position :
+====================================================*/
+.position-absolute {
+	position: absolute;
+}
+.position-top-left {
+	top: 0;
+	left: 0;
+}
+.position-top-right {
+	top: 0;
+	right: 0;
+	left: auto;
+}
+.position-bottom-left {
+	top: auto;
+	bottom: 0;
+	left: 0;
+	right: auto;
+}
+.position-bottom-right {
+	top: auto;
+	bottom: 0;
+	left: auto;
+	right: 0;
+}
+
+.position-bottom-full {
+	top: auto;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%
+}
+.position-top-full {
+	top: 0;
+	bottom: auto;
+	left: 0;
+	right: 0;
+	width: 100%
+}
+.position-left-full {
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: auto;
+	height: 100%
+}
+.position-right-full {
+	top: 0;
+	bottom: 0;
+	left: auto;
+	right: 0;
+	height: 100%
+}
+
+/* Remove snpinner arrows from input type number */
+input[type=number].no-spin-buttons::-webkit-inner-spin-button,
+input[type=number].no-spin-buttons::-webkit-outer-spin-button {
+    -webkit-appearance: textfield;
+    margin: 0;
+}
+input[type=number].no-spin-buttons {
+    -moz-appearance: textfield;
+}
+
+/* iPhone Remove defult appearance of Select dropdown */
+select.no-default-appearance {
+	-webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* SVG background image */
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='%238C98F2'><polygon points='0,0 100,0 50,50'/></svg>") no-repeat;
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='32' height='24' viewBox='0 0 32 24'><polygon points='0,0 32,0 16,24' style='fill: rgb%2828, 30, 32%29'></polygon></svg>");
+    background-size: 12px;
+    background-position: calc(100% - 10px) center;
+    background-repeat: no-repeat;
+    background-size: 9px 6px;
+    padding-right: 1.5rem;
+}
+
+.no-hyphens {
+	-moz-hyphens:none;
+	-ms-hyphens:none;
+	-webkit-hyphens: none;
+	hyphens:none;
+}

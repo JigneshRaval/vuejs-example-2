@@ -1,0 +1,16 @@
+/* = @mixins : Convert PX to REM
+=======================================*/
+
+@function remy($pxsize, $rembase: $sg-base-font-size) {
+    /* if unit is not provided */
+    @if (unitless($pxsize)) {
+        $pxsize: $pxsize * 1px;
+    }
+
+    @return ($pxsize / $rembase)+rem;
+}
+
+@mixin fontSize($size) {
+    font-size: $size; /* Fallback in px */
+    font-size: remy($size);
+}

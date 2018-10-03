@@ -1,0 +1,48 @@
+.pagination {
+    justify-content: center;
+}
+.pagination-holder {
+    margin:15px 0;
+    display: flex;
+    flex-direction: row;
+}
+.pagination-holder a {
+    font-weight: 700;
+    cursor:pointer;
+    margin:0 5px;
+    color:#333;
+    display: block;
+    padding: 5px;
+    min-width: 40px;
+    text-align: center;
+}
+.pagination-holder a:hover {
+    background-color:#222;
+    color:#fff !important;
+}
+.pagination-holder a.jp-previous {
+    margin-right:15px;
+}
+.pagination-holder a.jp-next {
+    margin-left:15px;
+}
+.pagination-holder a.jp-current,
+a.jp-current:hover {
+    color:#FF4242;
+    font-weight:bold;
+}
+.pagination-holder a.jp-disabled,
+a.jp-disabled:hover {
+    pointer-events: none;
+    color:#bbb;
+}
+.pagination-holder a.jp-current,
+a.jp-current:hover,
+.pagination-holder a.jp-disabled,
+a.jp-disabled:hover {
+    cursor:default;
+    background:none;
+}
+.pagination-holder span {
+    margin: 0 5px;
+}

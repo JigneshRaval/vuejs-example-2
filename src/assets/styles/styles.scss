@@ -1,0 +1,133 @@
+body {
+	background-color: #f4f4f4;
+	font-size: var(--base-font-size, 16px);
+	line-height: var(--base-line-height, 1.5);
+}
+body.showVerticalGrid {
+	background-image: linear-gradient(#d3d1d1 1px, transparent 1px);
+	background-size: 100% 8px;
+	background-position-y: -1px;
+}
+body, td, th {
+	font-family: var(--base-font, 'Open Sans')
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Roboto';
+	font-weight: bold;
+}
+.container-fluid {
+	display: flex;
+	flex-direction: row;
+    flex-basis: auto;
+	margin: 0;
+	padding: 0;
+}
+
+
+
+
+/* = Content Wrapper
+=============================================*/
+.isIndexNavOpened .content-wrapper {
+	flex-basis: 85%;
+}
+.content-wrapper {
+	flex-basis: 100%;
+}
+
+
+
+
+/* Scroll to top functionality
+===================================================*/
+.scroll-top {
+    position: fixed;
+    right: 2%;
+    bottom: 5%;
+    padding: 15px;
+    display: inline-block;
+    color: #000;
+    background: #FFF;
+    border: 1px solid #CCC;
+    z-index: 2600;
+    font-size: 24px;
+    border-radius: 5px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s linear;
+    box-shadow: 0 18px 37px -7px rgba(39, 60, 77, 0.2);
+}
+.scroll-top:hover,
+.scroll-top:active,
+.scroll-top:focus {
+    color: #FFF !important;
+    text-decoration: none !important;
+    background: #2196F3;
+    border-color: #2196F3;
+}
+
+.scroll-top.isVisible {
+    visibility: visible;
+    opacity: 1;
+}
+
+body.darkTheme {
+	background-color: #576574;
+	color: #e5e9ec;
+
+	a {
+		color: #ffc107;
+		&:hover,
+		&:focus {
+			color: #FFF;
+		}
+	}
+}
+
+code {
+	background-color: #e6ebef;
+    font-family: Consolas,monospace;
+    padding: 0 var(--base-vertical-space-1x);
+    border-radius: var(--base-vertical-space-half);
+    display: inline-block;
+	font-size: 14px;
+	font-weight: bold;
+}
+pre {
+    margin: var(--base-vertical-space-2x) auto;
+    width: 100%;
+    padding: var(--base-vertical-space-3x);
+    font-family: Inconsolata, Consolas, monospace, sans-serif;
+    font-size: 1rem;
+	line-height: 2;
+    overflow: auto;
+    background: #e6ebef;
+    border-radius: var(--base-vertical-space-half);
+	position:relative;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+}
+pre code { background-color: transparent; padding: 0; display: block; border: 0px solid; font-weight: normal; }
+pre:after {
+	content: "<CODE>";
+	position: absolute;
+	top:0;
+	right: 0;
+	padding: 5px 15px;
+	background: #999;
+	color: #FFF;
+}
+.hljs {
+	background-color: transparent;
+}
+
+.html-to-markdown-convertor {
+	width: 80%;
+    margin: 2em auto;
+
+	#formHtmltoMd {
+		label {
+			font-weight: bold;
+		}
+	}
+}

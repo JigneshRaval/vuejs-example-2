@@ -1,0 +1,35 @@
+{
+	"name": "view-js-example-2",
+	"version": "1.0.0",
+	"description": "View.js Examples",
+	"license": "MIT",
+	"dependencies": {
+		"vue": "^2.5.17",
+		"vue-router": "^3.0.1"
+	},
+	"devDependencies": {
+		"copy-webpack-plugin": "^4.5.2",
+		"css-loader": "^1.0.0",
+		"extract-text-webpack-plugin": "^4.0.0-beta.0",
+		"file-loader": "^2.0.0",
+		"html-webpack-plugin": "^3.2.0",
+		"node-sass": "^4.9.3",
+		"sass-loader": "^7.1.0",
+		"ts-loader": "^5.2.1",
+		"typescript": "^3.1.1",
+		"vue-loader": "^15.4.2",
+		"vue-template-compiler": "^2.5.17",
+		"webpack": "^4.20.2",
+		"webpack-cli": "^3.1.2"
+	},
+	"scripts": {
+		"serve": "webpack-dev-server --devtool eval --progress --colors --open --hot",
+		"dev": "webpack --mode development",
+		"dev:w": "webpack --mode development -w",
+		"build": "webpack --mode production",
+		"fonts": "xcopy .\\src\\assets\\fonts .\\dist\\assets\\fonts /E",
+		"images": "xcopy .\\src\\assets\\images .\\dist\\assets\\images /E",
+		"assets": "npm run fonts && npm run images",
+		"copy": "npm run assets"
+	}
+}
