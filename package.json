@@ -27,9 +27,10 @@
 		"dev": "webpack --mode development",
 		"dev:w": "webpack --mode development -w",
 		"build": "webpack --mode production",
+		"tools": "copy .\\server.js .\\dist",
 		"fonts": "xcopy .\\src\\assets\\fonts .\\dist\\assets\\fonts /E",
 		"images": "xcopy .\\src\\assets\\images .\\dist\\assets\\images /E",
-		"assets": "npm run fonts && npm run images",
+		"assets": "npm run tools && npm run fonts && npm run images",
 		"copy": "npm run assets"
 	}
 }

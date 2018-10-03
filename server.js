@@ -14,7 +14,7 @@ var request = require('request');
 var querystring = require('querystring');
 
 // you can pass the parameter in the command line. e.g. node static_server.js 3000
-const port = process.argv[2] || 3000;
+const port = process.argv[2] || 3001;
 
 http.createServer(function (req, res) {
 
@@ -53,7 +53,7 @@ http.createServer(function (req, res) {
         }
         // if is a directory, then look for index.html
         if (fs.statSync(pathname).isDirectory()) {
-            pathname += './dist/index.html';
+            pathname += './index.html';
         }
         // read file from file system
         fs.readFile(pathname, function (err, data) {
